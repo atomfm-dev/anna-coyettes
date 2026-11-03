@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Coyettes Booster Club</title>
+    <meta
+      name="description"
+      content="Local school booster club website for the Anna Coyettes. Support our team, our families, and our community."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="page-home" data-page="home" data-section="home">
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="./" aria-label="Anna Coyettes Booster Club home page">
+          <span class="brand-logo">
+            <img class="brand-logo-full" src="assets/logos/CoyettesFull_transparent.png" alt="" />
+            <img class="brand-logo-mini" src="assets/logos/CoyettesMini_transparent.png" alt="" />
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <ul class="site-nav-list">
+            <!-- <li class="nav-item"><a class="nav-link" data-page="home" data-section="home" href="./">Home</a></li> -->
+            <li class="nav-item"><a class="nav-link" data-page="about" data-section="about" href="about/">About</a></li>
+            <li class="nav-item has-submenu">
+              <div class="nav-item-main">
+                <a class="nav-link" data-page="team" data-section="team" href="team/">Team</a>
+                <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="team-submenu" aria-label="Show Team pages"><span class="chevron"></span></button>
+              </div>
+              <ul class="submenu" id="team-submenu">
+                <li><a class="submenu-link" data-page="team" href="team/">Meet the Team</a></li>
+                <li><a class="submenu-link" data-page="team-history" href="team/history/">Team History</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" data-page="events" data-section="events" href="events/">Events</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="join" data-section="join" href="join/">Join the Coyettes</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="support" data-section="support" href="support/">Support Us</a></li>
+            <li class="nav-item has-submenu">
+              <div class="nav-item-main">
+                <a class="nav-link" data-page="sponsors" data-section="sponsors" href="sponsors/">Sponsors</a>
+                <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="sponsors-submenu" aria-label="Show Sponsors pages"><span class="chevron"></span></button>
+              </div>
+              <ul class="submenu" id="sponsors-submenu">
+                <li><a class="submenu-link" data-page="sponsors" href="sponsors/">Our Sponsors</a></li>
+                <li><a class="submenu-link" data-page="become-a-sponsor" href="sponsors/become-a-sponsor/">Become a Sponsor</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="mobile-menu-overlay" aria-hidden="true"></div>
+
+    <main>
+      <section class="site-hero">
+        <div class="site-hero-overlay"></div>
+        <div class="container site-hero-inner">
+          <div class="site-hero-copy">
+            <span class="eyebrow">Celebrating Our Dancers</span>
+            <h1>Anna Coyettes</h1>
+            <p>
+              Celebrating our dancers, connecting the community, and supporting the team through every kick,
+              turn, and unforgettable performance. Proudly carrying the spirit of the Anna Coyettes since the
+              1950s.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="team/">Meet the Team</a>
+              <a class="btn btn-secondary" href="support/">Support the Team</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <span class="eyebrow">Supporting Student-Athletes</span>
+            <h1>Fueling the next big win for our local team.</h1>
+            <p>
+              We bring families, fans, and local businesses together to cheer on the Anna Coyettes with
+              pride, purpose, and community support.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="sponsors/become-a-sponsor/">Become a Sponsor</a>
+              <a class="btn btn-secondary" href="about/">Learn More</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-badge">2026 Season</div>
+            <div class="stat-block">
+              <strong>450+</strong>
+              <span>Community Members</span>
+            </div>
+            <div class="stat-block">
+              <strong>12</strong>
+              <span>Fundraising Events</span>
+            </div>
+            <div class="stat-block">
+              <strong>$28k</strong>
+              <span>Raised This Year</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="upcoming-section">
+        <video class="upcoming-background-video" autoplay muted loop playsinline aria-hidden="true" tabindex="-1" poster="assets/images/IMG_5331.JPEG">
+          <source src="assets/videos/backgroundloop.mp4" type="video/mp4" />
+        </video>
+        <div class="container">
+          <div class="upcoming-layout">
+            <div class="upcoming-heading">
+              <span class="upcoming-kicker">Upcoming</span>
+              <h2>Events &amp; Performances</h2>
+            </div>
+            <div class="upcoming-carousel" data-event-carousel role="region" aria-roledescription="carousel" aria-label="Upcoming events">
+              <div class="upcoming-carousel-viewport" tabindex="0" aria-label="Event details. Use the left and right arrow keys to browse.">
+                <div class="upcoming-carousel-track">
+                  <article class="upcoming-event-card" role="group" aria-roledescription="slide">
+                    <span class="event-date">Nov 7 · 11am</span>
+                    <h3>Veterans Day Parade</h3>
+                    <p>Cheer on the Coyettes as they march in honor of our veterans.</p>
+                    <p class="event-location"><strong>Location:</strong> Downtown Anna</p>
+                    <a class="event-link" href="events/#veterans-day-parade">Event details</a>
+                  </article>
+                  <article class="upcoming-event-card" role="group" aria-roledescription="slide">
+                    <span class="event-date">Nov 28 · 10am–1:30pm</span>
+                    <h3>Fall Dance Party</h3>
+                    <p>A fun dance-party fundraiser for kids in grades K–6, with pizza, games, and dancing.</p>
+                    <p class="event-location"><strong>Location:</strong> Anna High School (AHS)</p>
+                    <a class="event-link" href="events/#fall-dance-party">Details &amp; flyer</a>
+                  </article>
+                </div>
+              </div>
+              <div class="upcoming-carousel-controls">
+                <button class="carousel-arrow" type="button" data-event-previous aria-label="Show previous event">
+                  <span aria-hidden="true">&larr;</span>
+                </button>
+                <span class="carousel-status" data-event-status aria-live="polite">Event 1 of 2</span>
+                <button class="carousel-arrow" type="button" data-event-next aria-label="Show next event">
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+              <div class="upcoming-events-action">
+                <a class="btn btn-secondary" href="events/">View all event details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow eyebrow-purple">Our Mission</span>
+            <h2>Building pride, opportunity, and community.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">🏆</div>
+              <h3>Boost Team Success</h3>
+              <p>We help fund equipment, travel, team meals, and the resources student-athletes need to thrive.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">🤝</div>
+              <h3>Grow Community</h3>
+              <p>From game nights to volunteer days, we connect families, alumni, and neighbors around our team.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Support Student Growth</h3>
+              <p>Our efforts create opportunities for leadership, teamwork, and confidence beyond the field.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading compact">
+            <span class="eyebrow eyebrow-purple">Coyettes Community</span>
+            <h2>Find your way into the action.</h2>
+          </div>
+
+          <div class="event-grid">
+            <article class="event-card">
+              <h3>See What’s Happening</h3>
+              <p>Find out how to get the latest information about performances and community events.</p>
+              <a href="events/">Explore Events</a>
+            </article>
+            <article class="event-card">
+              <h3>Meet the Team</h3>
+              <p>Get to know the dancers and learn about the Coyettes’ history and traditions.</p>
+              <a href="team/">Meet the Coyettes</a>
+            </article>
+            <article class="event-card">
+              <h3>Support the Dancers</h3>
+              <p>Discover ways to get involved and help create opportunities for student-athletes.</p>
+              <a href="support/">Support Us</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>Anna Coyettes Booster Club</strong>
+          <p>Supporting our athletes and our community.</p>
+        </div>
+        <div class="footer-links">
+          <a href="./">Home</a>
+          <a href="about/">About</a>
+          <a href="team/">Team</a>
+          <a href="sponsors/">Sponsors</a>
+          <a href="join/">Join the Coyettes</a>
+          <a href="events/">Events</a>
+          <a href="support/">Support Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
