@@ -1,5 +1,9 @@
 {
+  "name": "anna-coyettes",
   "compatibility_date": "2026-11-06",
+  "build": {
+    "command": ""
+  },
   "assets": {
     "directory": "."
   },
