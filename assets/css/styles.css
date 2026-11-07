@@ -318,7 +318,7 @@ main {
   position: relative;
   min-height: 640px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-image: url("../images/IMG_5548.JPEG");
   background-position: center center;
   background-size: cover;
@@ -408,6 +408,15 @@ main {
   align-items: center;
 }
 
+.sponsor-spotlight-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
 .sponsor-spotlight .eyebrow {
   margin-bottom: 0.45rem;
 }
@@ -432,16 +441,32 @@ main {
   min-height: 7rem;
   padding: 1rem 1.25rem;
   place-items: center;
-  /* border: 1px solid var(--line); */
   border-radius: 0.9rem;
-  /* background: #fff; */
 }
 
 .sponsor-spotlight-logo img {
   display: block;
   width: 100%;
-  max-height: 6rem;
+  max-height: 4rem;
   object-fit: contain;
+}
+
+.farmers-logo-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.farmers-logo-lockup img:first-child {
+  flex: 0 0 27%;
+  width: 27%;
+}
+
+.farmers-logo-lockup img:last-child {
+  flex: 0 0 68%;
+  width: 68%;
 }
 
 .sponsor-spotlight .pathway-link {
@@ -1113,6 +1138,131 @@ main {
   background: linear-gradient(135deg, rgba(77, 42, 119, 0.96), rgba(110, 86, 145, 0.9));
 }
 
+.team-intro-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-intro-copy h2,
+.team-leadership-copy h2 {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.team-intro-copy p:last-child {
+  max-width: 660px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+.team-photo {
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.team-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.team-photo figcaption {
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.team-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.team-value-card {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: var(--surface);
+}
+
+.team-value-number {
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.team-value-card h3 {
+  margin: 0.5rem 0;
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.3rem;
+}
+
+.team-value-card p,
+.team-leadership-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.team-leadership-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.team-leadership-copy h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.team-leadership-placeholder {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px dashed rgba(77, 42, 119, 0.35);
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, var(--surface-alt), #fff);
+  color: var(--primary-dark);
+  text-align: center;
+}
+
+.team-leadership-icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: 0.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  font-size: 1.3rem;
+}
+
+.team-leadership-placeholder p {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.team-leadership-placeholder > span:last-child {
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
 .sponsor-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1169,6 +1319,32 @@ main {
 .sponsor-card {
   padding: 1.7rem 1.5rem;
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.sponsor-recognition-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 860px;
+  margin: 2rem auto 0;
+}
+
+.sponsor-logo {
+  display: grid;
+  min-height: 8rem;
+  padding: 1rem;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: #fff;
+}
+
+.sponsor-logo > img {
+  display: block;
+  width: min(100%, 19rem);
+  max-height: 6rem;
+  object-fit: contain;
+}
+
+.sponsor-logo .farmers-logo-lockup {
+  width: min(100%, 19rem);
 }
 
 .sponsor-card:hover,
@@ -1233,6 +1409,136 @@ main {
   color: var(--ink);
 }
 
+.page-join .section-heading p {
+  max-width: 680px;
+  color: var(--muted);
+}
+
+.join-intro {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.join-intro p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.join-team-grid,
+.join-prep-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.join-team-card,
+.join-prep-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(21, 13, 28, 0.04);
+}
+
+.join-team-card h3,
+.join-prep-card h3 {
+  margin: 0 0 0.8rem;
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.join-team-card .tier {
+  margin-bottom: 0.65rem;
+}
+
+.join-skill-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.join-skill-list li::marker {
+  color: var(--primary);
+}
+
+.join-skill-list strong {
+  color: var(--ink);
+}
+
+.join-prep-grid {
+  gap: 1rem;
+}
+
+.join-prep-grade {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.join-prep-card h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+}
+
+.join-prep-card p,
+.join-safety-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.join-safety-note {
+  margin-top: 1rem;
+  font-size: 0.94rem;
+}
+
+.join-contact-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid rgba(77, 42, 119, 0.14);
+  border-radius: 1.4rem;
+  background: linear-gradient(135deg, rgba(77, 42, 119, 0.06), rgba(77, 42, 119, 0.14));
+}
+
+.join-contact-panel > div {
+  max-width: 700px;
+}
+
+.join-contact-panel .eyebrow {
+  margin-bottom: 0.55rem;
+}
+
+.join-contact-panel h2 {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.join-contact-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.join-contact-panel .btn {
+  flex: 0 0 auto;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(52, 29, 81, 0.16);
+}
+
 .site-footer {
   background: var(--primary-dark);
   color: rgba(255, 255, 255, 0.9);
@@ -1248,14 +1554,29 @@ main {
 
 .footer-brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.85rem;
+  /* gap: 0.85rem; */
   flex: 0 0 auto;
+}
+
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links-column h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #fff;
+}
+.footer-social-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo {
   display: inline-flex;
-  width: 3.25rem;
+  width: 9.25rem;
   height: 3.25rem;
   align-items: center;
   justify-content: center;
@@ -1329,12 +1650,19 @@ main {
   .split-layout,
   .pathways-grid,
   .feature-grid,
+  .join-team-grid,
+  .join-prep-grid,
   .event-grid,
   .upcoming-layout,
+  .team-leadership-layout,
   .sponsor-grid,
   .support-options {
     grid-template-columns: 1fr;
     /* margin-left: 2rem; */
+  }
+
+  .team-values-grid {
+    grid-template-columns: 1fr;
   }
 
   .upcoming-layout {
@@ -1396,9 +1724,18 @@ main {
   }
 
   .callout-box,
-  .footer-shell {
+  .footer-shell,
+  .join-contact-panel {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .join-contact-panel .btn {
+    align-self: flex-start;
+  }
+
+  .sponsor-spotlight-sponsors {
+    justify-content: center;
   }
 
   .upcoming-carousel-track {

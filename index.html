@@ -34,8 +34,8 @@
 
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <ul class="site-nav-list">
-            <!-- <li class="nav-item"><a class="nav-link" data-page="home" data-section="home" href="./">Home</a></li> -->
-            <li class="nav-item"><a class="nav-link" data-page="about" data-section="about" href="about/">About</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="home" data-section="home" href="./">Home</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" data-page="about" data-section="about" href="about/">About</a></li> -->
             <li class="nav-item has-submenu">
               <div class="nav-item-main">
                 <a class="nav-link" data-page="team" data-section="team" href="team/">Team</a>
@@ -75,8 +75,7 @@
             <h1>Anna Coyettes</h1>
             <p>
               Celebrating our dancers, connecting the community, and supporting the team through every kick,
-              turn, and unforgettable performance. Proudly carrying the spirit of the Anna Coyettes since the
-              1950s.
+              turn, and unforgettable performance.
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="team/">Meet the Team</a>
@@ -86,7 +85,7 @@
         </div>
       </section>
 
-      <section class="pathways-section section-light" aria-label="Get involved with the Coyettes">
+      <!-- <section class="pathways-section section-light" aria-label="Get involved with the Coyettes">
         <div class="container">
           <div class="section-heading compact">
             <span class="eyebrow eyebrow-purple">Get Involved</span>
@@ -110,7 +109,38 @@
             <a class="pathway-link" href="support/">Ways to Help <span aria-hidden="true">&rarr;</span></a>
           </article>
         </div>
+      </section> -->
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading compact">
+            <span class="eyebrow eyebrow-purple">Get Involved</span>
+            <h2>Find your way into the action</h2>
+          </div>
+
+          <div class="event-grid">
+            <article class="event-card">
+              <h3>Interested in joining?</h3>
+              <p>Find out how to become a member of the Coyettes.</p>
+              <!-- <a href="events/">Explore Events</a> -->
+              <a class="pathway-link" href="join/">Join the Coyettes <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="event-card">
+              <h3>See us perform</h3>
+              <p>Explore upcoming events and catch the Coyettes.</p>
+              <!-- <a href="team/">Meet the Coyettes</a> -->
+              <a class="pathway-link" href="events/">View Events <span aria-hidden="true">&rarr;</span></a>
+            </article>
+            <article class="event-card">
+              <h3>Support the Dancers</h3>
+              <p>Discover ways to get involved and help create opportunities for our student-athletes.</p>
+              <!-- <a href="support/">Support Us</a> -->
+              <a class="pathway-link" href="support/">Ways to Help <span aria-hidden="true">&rarr;</span></a>
+            </article>
+          </div>
+        </div>
       </section>
+
 
       <section class="history-feature" aria-labelledby="history-feature-title">
         <div class="history-feature-copy">
@@ -235,13 +265,21 @@
 
       <section class="sponsor-spotlight" aria-labelledby="sponsor-spotlight-title">
         <div class="container sponsor-spotlight-content">
-          <span class="eyebrow eyebrow-purple">With gratitude</span>
+          <!-- <span class="eyebrow eyebrow-purple">With gratitude</span> -->
           <h2 id="sponsor-spotlight-title">Thank you to Our Sponsors!</h2>
           <!-- <p>We’re grateful for their support of the Coyettes and our community.</p> -->
-          <div class="sponsor-spotlight-logo">
-            <img src="assets/logos/TDTaphouse_logo.avif" alt="Touchdown Taphouse" loading="lazy" />
+          <div class="sponsor-spotlight-sponsors">
+            <div class="sponsor-spotlight-logo">
+              <img src="assets/logos/TDTaphouse_logo.avif" alt="Touchdown Taphouse" loading="lazy" />
+            </div>
+            <div class="sponsor-spotlight-logo">
+              <div class="farmers-logo-lockup" role="img" aria-label="Farmers">
+                <img src="assets/logos/farmers-logo-emblem-trans.png" alt="" loading="lazy" />
+                <img src="assets/logos/farmers-logo-text-trans.png" alt="" loading="lazy" />
+              </div>
+            </div>
           </div>
-          <a class="pathway-link" href="sponsors/become-a-sponsor/">Become a sponsor <span aria-hidden="true">&rarr;</span></a>
+          <!-- <a class="pathway-link" href="sponsors/become-a-sponsor/">Become a sponsor <span aria-hidden="true">&rarr;</span></a> -->
         </div>
       </section>
 
@@ -271,58 +309,35 @@
           </div>
         </div>
       </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading compact">
-            <span class="eyebrow eyebrow-purple">Coyettes Community</span>
-            <h2>Find your way into the action.</h2>
-          </div>
-
-          <div class="event-grid">
-            <article class="event-card">
-              <h3>See What’s Happening</h3>
-              <p>Find out how to get the latest information about performances and community events.</p>
-              <a href="events/">Explore Events</a>
-            </article>
-            <article class="event-card">
-              <h3>Meet the Team</h3>
-              <p>Get to know the dancers and learn about the Coyettes’ history and traditions.</p>
-              <a href="team/">Meet the Coyettes</a>
-            </article>
-            <article class="event-card">
-              <h3>Support the Dancers</h3>
-              <p>Discover ways to get involved and help create opportunities for student-athletes.</p>
-              <a href="support/">Support Us</a>
-            </article>
-          </div>
-        </div>
-      </section>
     </main>
 
+    <!-- FOOTER SECTION FOR EVERY PAGE -->
     <footer class="site-footer">
       <div class="container footer-shell">
         <div class="footer-brand">
-          <a class="footer-logo" href="./" aria-label="Anna Coyettes Booster Club home page">
-            <img src="assets/logos/CoyettesMini_transparent.png" alt="" />
-          </a>
           <div>
-            <strong>Anna Coyettes Booster Club</strong>
-            <p>Supporting our athletes and our community.</p>
+            <strong>Anna High School</strong>
+            <!-- <p>Supporting our athletes and our community.</p> -->
           </div>
+          <a class="footer-logo" href="./" aria-label="Anna Coyettes Booster Club home page">
+            <img src="assets/logos/CoyettesFull_transparent.png" alt="" />
+          </a>
+          
         </div>
         <div class="footer-links">
           <a href="./">Home</a>
-          <a href="about/">About</a>
-          <a href="team/">Team</a>
+          <a href="team/">Meet the Team</a>
           <a href="sponsors/">Sponsors</a>
-          <a href="join/">Join the Coyettes</a>
+          <!-- <a href="join/">Join the Coyettes</a> -->
           <a href="events/">Events</a>
           <a href="support/">Support Us</a>
         </div>
-        <a class="footer-social-link" href="https://www.instagram.com/anna_coyettes/" target="_blank" rel="noopener noreferrer" aria-label="Follow Anna Coyettes on Instagram (opens in a new tab)">
+        <div class="footer-social-group">
+          <strong>Stay Connected</strong>
+          <a class="footer-social-link" href="https://www.instagram.com/annacoyettesdrillteam/" target="_blank" rel="noopener noreferrer" aria-label="Follow Anna Coyettes on Instagram (opens in a new tab)">
           <img src="assets/logos/instagram-brands-solid-full.svg" alt="" />
         </a>
+        </div>
       </div>
     </footer>
 
