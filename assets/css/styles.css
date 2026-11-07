@@ -11,6 +11,21 @@
   --shadow: 0 18px 40px rgba(32, 20, 45, 0.12);
   --container: 1180px;
   --header-height: 88px;
+  --font-parisienne: "Parisienne", cursive;
+  --font-tangerine: "Tangerine", cursive;
+  --font-playball: "Playball", cursive;
+}
+
+.font-parisienne {
+  font-family: var(--font-parisienne);
+}
+
+.font-tangerine {
+  font-family: var(--font-tangerine);
+}
+
+.font-playball {
+  font-family: var(--font-playball);
 }
 
 * {
@@ -371,9 +386,15 @@ main {
 
 .upcoming-section {
   position: relative;
+  display: flex;
   isolation: isolate;
-  padding: 4.5rem 0;
-  background: url("../images/IMG_5331.JPEG") center 42% / cover no-repeat;
+  min-height: 75vh;
+  padding: 2.5rem 0;
+  background: url("../images/DSC_0195.jpg") center 42% / cover no-repeat;
+}
+
+.upcoming-section > .container {
+  display: flex;
 }
 
 .upcoming-background-video {
@@ -474,10 +495,15 @@ main {
 }
 
 .upcoming-layout {
+  flex: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
   align-items: start;
   column-gap: clamp(2rem, 8vw, 8rem);
+}
+
+.upcoming-heading {
+  align-self: start;
 }
 
 .upcoming-heading h2 {
@@ -499,6 +525,7 @@ main {
 }
 
 .upcoming-carousel {
+  align-self: end;
   min-width: 0;
   width: 100%;
 }
@@ -889,7 +916,10 @@ main {
 }
 
 .section-light {
-  /* background: var(--surface-alt); */
+  background: var(--surface-alt);
+}
+.section-history {
+  /* padding: 0; */
 }
 
 .pathways-section {
@@ -1182,6 +1212,113 @@ main {
   text-align: center;
 }
 
+.history-overview h2,
+.history-moments-heading h3,
+.history-preserve h2 {
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.history-overview h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.history-overview p:not(.lead) {
+  color: var(--muted);
+}
+
+.history-season > .section-heading {
+  margin-bottom: 2rem;
+}
+
+.history-season > .section-heading p {
+  color: var(--muted);
+}
+
+.history-season-photo {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.history-season-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.history-season-photo figcaption {
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.history-moments-heading {
+  margin: 3rem 0 1.25rem;
+  text-align: center;
+}
+
+.history-moments-heading h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.history-moments-heading p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.history-moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.history-moment {
+  position: relative;
+  min-height: 220px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--surface-alt);
+  box-shadow: 0 12px 28px rgba(21, 13, 28, 0.12);
+}
+
+.history-moment img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.history-moment:hover img {
+  transform: scale(1.03);
+}
+
+.history-moment figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 2.25rem 1rem 0.85rem;
+  background: linear-gradient(transparent, rgba(29, 16, 39, 0.82));
+  color: #fff;
+  font-weight: 700;
+}
+
+.history-preserve h2 {
+  margin: 0.5rem 0;
+}
+
+.history-preserve p {
+  max-width: 640px;
+  color: var(--muted);
+}
+
 .team-values-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1226,41 +1363,32 @@ main {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
 }
 
-.team-leadership-placeholder {
-  display: flex;
-  min-height: 230px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  border: 1px dashed rgba(77, 42, 119, 0.35);
+.team-leadership-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 1.25rem;
-  background: linear-gradient(135deg, var(--surface-alt), #fff);
-  color: var(--primary-dark);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.team-leadership-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.team-leadership-photo figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 1.25rem;
+  color: var(--muted);
   text-align: center;
 }
 
-.team-leadership-icon {
-  display: grid;
-  width: 2.75rem;
-  height: 2.75rem;
-  margin-bottom: 0.5rem;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--primary-soft);
-  font-size: 1.3rem;
-}
-
-.team-leadership-placeholder p {
-  margin: 0;
-  font-family: "Poppins", "Segoe UI", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.team-leadership-placeholder > span:last-child {
-  margin-top: 0.25rem;
-  color: var(--muted);
+.team-leadership-photo figcaption strong {
+  color: var(--ink);
 }
 
 .sponsor-grid {
@@ -1574,6 +1702,11 @@ main {
   flex-direction: column;
 }
 
+.footer-social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
 .footer-logo {
   display: inline-flex;
   width: 9.25rem;
@@ -1632,6 +1765,7 @@ main {
 .footer-social-link img {
   width: 1.35rem;
   height: 1.35rem;
+  object-fit: contain;
   filter: brightness(0) invert(1);
 }
 
@@ -1646,6 +1780,10 @@ main {
 }
 
 @media (max-width: 900px) {
+  .history-moments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-layout,
   .split-layout,
   .pathways-grid,
@@ -1666,7 +1804,15 @@ main {
   }
 
   .upcoming-layout {
-    row-gap: 2rem;
+    row-gap: 5rem;
+  }
+
+  .upcoming-section {
+    min-height: 0;
+  }
+
+  .upcoming-section > .container {
+    display: block;
   }
 
   .history-feature {
