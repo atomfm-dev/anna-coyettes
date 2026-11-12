@@ -25,9 +25,27 @@ const closeSubmenus = (except) => {
 };
 
 if (header) {
+  const topThreshold = 24;
+  let previousScrollY = window.scrollY;
+
   const updateHeaderState = () => {
-    const threshold = header.classList.contains('scrolled') ? 8 : 24;
-    header.classList.toggle('scrolled', window.scrollY > threshold);
+    const scrollY = Math.max(0, window.scrollY);
+    const isNearTop = scrollY <= topThreshold;
+    const scrollDelta = scrollY - previousScrollY;
+
+    header.classList.toggle('scrolled', !isNearTop);
+
+    if (isNearTop || document.body.classList.contains('nav-open')) {
+      header.classList.remove('header-hidden');
+    } else if (scrollDelta > 2) {
+      header.classList.add('header-hidden');
+    } else if (scrollDelta < -2) {
+      header.classList.remove('header-hidden');
+    }
+
+    header.inert = header.classList.contains('header-hidden')
+      && !header.contains(document.activeElement);
+    previousScrollY = scrollY;
   };
 
   let ticking = false;
@@ -43,6 +61,13 @@ if (header) {
   });
 
   updateHeaderState();
+}
+
+if (header) {
+  header.addEventListener('focusin', () => {
+    header.classList.remove('header-hidden');
+    header.inert = false;
+  });
 }
 
 if (siteNav) {
