@@ -1294,6 +1294,55 @@ main {
   text-align: center;
 }
 
+.director-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.director-photo {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.director-photo img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.director-photo figcaption {
+  padding: 0.8rem 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.director-copy h2 {
+  margin: 0.35rem 0 0.75rem;
+  color: var(--ink);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.director-copy p {
+  color: var(--muted);
+}
+
+.director-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .history-overview h2,
 .history-moments-heading h3,
 .history-preserve h2 {
@@ -1883,6 +1932,7 @@ main {
   .join-prep-grid,
   .event-grid,
   .upcoming-layout,
+  .director-layout,
   .team-leadership-layout,
   .sponsor-grid,
   .support-options {
